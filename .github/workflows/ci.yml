@@ -16,15 +16,9 @@ jobs:
     - run: pip install pytest
     - run: pytest
 
-
-      name: Ruff
-    on: [ push, pull_request ]
-    ruff:
+  EOL:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/ruff-action@v3
-    run : pip install ruff
-
-
-    
+      - run: pip install ruff
